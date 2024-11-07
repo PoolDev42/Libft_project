@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:18:49 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/06 15:05:14 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/07 15:07:36 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ int	main() {
 
 	char array[] = "salut";
 	int length;
-
 
 	for(length = 0; length < 5; length++) {
 		printf("%c ", array[ length ]);
