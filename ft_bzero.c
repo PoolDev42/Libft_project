@@ -34,7 +34,7 @@ int	main() {
 	for(length = 0; length < 5; length++) {
 		printf("%c ", array[ length ]);
 	}
-	printf( "\n" );
+	printf("\n");
 
 	ft_bzero(array, 4);
 
