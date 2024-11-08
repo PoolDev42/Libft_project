@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 13:19:32 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/08 13:46:54 by lcalero          ###   ########.fr       */
+/*   Created: 2024/11/08 16:23:32 by lcalero           #+#    #+#             */
+/*   Updated: 2024/11/08 16:26:15 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,21 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	unsigned long	i;
 
 	i = 0;
-	while (src[i] && dst[i] && i < size)
+	while (src[i] && dst[i] && i < size - 1)
 	{
 		dst[i] = src[i];
 		i++;
 	}
 	dst[i] = '\0';
-	return (i);
+	return (ft_strlen(src));
 }
 
-/*#include <string.h>
 #include <stdio.h>
 int main(void)
 {
-	char src[] = "Salut les amis";
-	char dst[] = "Pourquoi faites vous cela";
-	size_t a = strlcpy(dst, src, 5);
-	printf("ft function : %s\n%lu", dst, a);
-}*/
+	char src[] = "kdjfkdsf";
+	char dest[] = "ihfdihgfdhgifdhg";
+	unsigned long a = ft_strlcpy(dest, src, 5);
+	printf("%s : %lu", dest, a);
+	return (0);
+}
