@@ -30,7 +30,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 
-#include <string.h>
+/*#include <string.h>
 #include <stdio.h>
 int	main(void)
 {
@@ -39,4 +39,4 @@ int	main(void)
 	char *res = (char *)ft_memchr(arr, '\0', 0);
 	printf("%s", res);
 	return (0);
-}
+}*/

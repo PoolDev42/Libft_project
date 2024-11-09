@@ -14,19 +14,22 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	unsigned long	i;
+	char *d = dst;
+    char *e = dst + size;
+    const char *s = src;
 
-	i = 0;
-	while (src[i] && dst[i] && i < size)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (ft_strlen(src));
+    while (*s != '\0' && d < e)
+        *d++ = *s++;
+    if (d < e)
+        *d = 0;
+    else if (size > 0)
+        d[-1] = 0;
+    while (*s != '\0')
+        s++;
+    return s - src;
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 int main(void)
 {
 	char src[] = "kdjfkdsfroekjter";
@@ -34,4 +37,4 @@ int main(void)
 	unsigned long a = ft_strlcpy(dest, src, 5);
 	printf("%s : %lu", dest, a);
 	return (0);
-}
+}*/
