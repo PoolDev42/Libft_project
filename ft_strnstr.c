@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 00:35:19 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/11 01:19:25 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/11 02:28:32 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	unsigned int	i;
-	unsigned int	j;
+	unsigned long	i;
+	unsigned long	j;
 
 	i = 0;
 	j = 0;
@@ -41,6 +41,7 @@ int	main(int ac, char **av)
 {
 	if (ac != 4)
 		return (1);
-	printf("%s", ft_strnstr((const char*)av[1], (const char*)av[2], atoi(av[3])));
+	printf("%s", ft_strnstr((const char*)av[1], 
+	(const char*)av[2], atoi(av[3])));
 	return (0);
 }*/
