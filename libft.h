@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:37:37 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/12 11:42:11 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/12 12:05:56 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,7 @@ char	*ft_strdup(const char *s);
 void	*ft_calloc(size_t nmemb, size_t size);
 
 char	*ft_substr(char const *s, unsigned int i, size_t len);
+
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif
