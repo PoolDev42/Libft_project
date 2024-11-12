@@ -6,33 +6,31 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:48:27 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/06 15:33:40 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/12 14:13:17 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
 	int		i;
-	int		lastindex;
 	char	*res;
 
-	i = 0;
-	lastindex = -1;
+	i = ft_strlen(s);
 	res = (char *) s;
-	while (s[i])
+	while (i >= 0)
 	{
 		if (s[i] == c)
-			lastindex = i;
-		i++;
+			return (res + i);
+		i--;
 	}
-	if (lastindex == -1)
-		return ((void *)0);
-	return (res + lastindex);
+	return ((void *)0);
 }
 
 /*#include <stdio.h>
 int	main(void)
 {
-	printf("%s", ft_strrchr("salut les amis", 'l'));
+	printf("%s", ft_strrchr( "Salut les amis", "l"));
     return 0;
 }*/

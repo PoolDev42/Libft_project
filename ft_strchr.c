@@ -6,24 +6,32 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:32:55 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/06 15:03:58 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/12 14:18:31 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
 	int		i;
+	int		firstindex;
 	char	*b;
 
 	b = (char *) s;
-	i = 0;
-	while (s[i])
+	i = ft_strlen(s);
+	firstindex = -1;
+	while (i >= 0)
 	{
 		if (s[i] == c)
-			return (b + i);
-		i++;
+		{
+			firstindex = i;
+		}
+		i--;
 	}
-	return ((void *)0);
+	if (firstindex == -1)
+		return ((void *)0);
+	return (b + firstindex);
 }
 
 /*#include <stdio.h>

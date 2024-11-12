@@ -6,16 +6,15 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:49:47 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/08 13:08:45 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/12 13:52:21 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if ((c >= 0 && c <= 31) || c == 127)
-		return (0);
-	else
+	if (c >= 32 && c <= 126)
 		return (1);
+	return (0);
 }
 
 /*#include <stdio.h>
