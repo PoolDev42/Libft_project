@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:56:54 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/08 11:29:20 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/13 11:33:01 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*d;
 	unsigned char	*s;
-
+	
+	if (dest == 0 && src == 0)
+		return (0);
 	if (src < dest && src + n >= dest)
 	{
 		d = dest + n - 1;

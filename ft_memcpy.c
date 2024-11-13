@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:28:49 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/07 16:49:18 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/13 11:32:24 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	d = dest;
 	s = (void *) src;
+	if (dest == 0 && src == 0)
+		return (0);
 	while (n > 0)
 	{
 		*d = *s;
