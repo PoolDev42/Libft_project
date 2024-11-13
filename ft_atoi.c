@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:37:23 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/08 15:55:22 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/13 12:02:51 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	sign = 1;
 	cpt = 0;
-	while ((nptr[i] >= 8 && nptr[i] <= 13) || nptr[i] == ' ')
+	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == ' ')
 		i++;
 	while ((nptr[i] == '-' || nptr[i] == '+'))
 	{

@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 14:31:25 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/13 11:10:45 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/13 12:22:59 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while (n > 0)
 	{
-		if (*p == c)
+		if (*p == (char)c)
 			return ((void *)s + i);
 		n--;
 		p++;
