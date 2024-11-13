@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 14:31:25 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/13 10:45:05 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/13 11:10:45 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	char			*p;
-	int				i;
+	unsigned int	i;
 
 	p = (void *) s;
 	i = 0;
@@ -27,7 +27,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		p++;
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
 
 /*#include <string.h>

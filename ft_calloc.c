@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 14:31:36 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/11 15:14:37 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/13 11:10:58 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void			*res;
 
 	res = malloc(nmemb * size);
-	if (res == NULL)
-		return (NULL);
+	if (res == 0)
+		return (0);
 	cpy = res;
 	while (nmemb > 0)
 	{
