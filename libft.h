@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:37:37 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/13 11:45:34 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/13 13:19:55 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 
-//size_t	ft_strlcat(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 char	*ft_strdup(const char *s);
 
