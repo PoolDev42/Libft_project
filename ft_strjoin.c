@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:04:57 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/13 11:37:23 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/13 15:49:09 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	j = 0;
 	res = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (res == 0)
-		return (0);
+	if (res == NULL)
+		return (NULL);
 	while (s1[i])
 	{
 		res[j] = s1[i];
