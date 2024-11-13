@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 14:31:25 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/11 15:23:08 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/13 10:45:05 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*p;
+	char			*p;
 	int				i;
 
 	p = (void *) s;
