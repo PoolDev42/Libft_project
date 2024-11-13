@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:18:16 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/13 11:37:19 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/13 15:00:02 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,13 @@ static unsigned int	count_chars(const char *str, const char *set)
 	i = 0;
 	j = ft_strlen(str) - 1;
 	cpt = 0;
-	while (is_in_str(set, str[i]))
+	while (is_in_str(set, str[i]) && str[i])
 	{
 		cpt++;
 		i++;
 	}
+	if (i == ft_strlen(str))
+		return (i);
 	while (is_in_str(set, str[j]))
 	{
 		cpt++;
