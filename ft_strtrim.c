@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:18:16 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/13 15:00:02 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/13 15:39:55 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (res);
 	}
 	res = malloc(ft_strlen(s1) - count_chars(s1, set) * sizeof(char) + 1);
-	if (res == 0)
-		return (0);
+	if (res == NULL)
+		return (NULL);
 	while (is_in_str(set, s1[i]))
 		i++;
 	while (j < ft_strlen(s1) - count_chars(s1, set))

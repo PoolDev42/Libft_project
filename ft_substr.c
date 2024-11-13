@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 11:14:22 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/13 11:37:12 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/13 15:39:17 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ char	*ft_substr(char const *s, unsigned int i, size_t len)
 		res = malloc(ft_strlen(s) * sizeof(char) + 1);
 	else
 		res = malloc(len * sizeof(char) + 1);
-	if (res == 0)
-		return (0);
+	if (res == NULL)
+		return (NULL);
 	while (s[i] && len > 0)
 	{
 		res[j] = s[i];
