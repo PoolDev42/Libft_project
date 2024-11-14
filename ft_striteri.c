@@ -6,14 +6,14 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 15:56:38 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/14 16:38:07 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/14 16:42:26 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
-	
+
 	i = 0;
 	if (!s || !f)
 		return ;
