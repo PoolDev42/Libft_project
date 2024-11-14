@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 11:14:22 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/13 16:36:49 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/14 13:38:43 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		res[0] = '\0';
 		return (res);
 	}
-	if (len > ft_strlen(s))
-		res = malloc(ft_strlen(s) * sizeof(char) + 1);
+	else if (start + len > ft_strlen(s))
+		res = malloc(ft_strlen(s) - start + 1);
 	else
 		res = malloc(len * sizeof(char) + 1);
 	if (res == NULL)
 		return (NULL);
-	while (s[start] && len > 0)
+	while (s[start + j] && len > 0)
 	{
-		res[j] = s[start];
-		start++;
+		res[j] = s[start + j];
 		j++;
 		len--;
 	}
