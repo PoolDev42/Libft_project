@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:18:16 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/13 15:39:55 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/14 20:26:25 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,13 @@ static unsigned int	count_chars(const char *str, const char *set)
 	return (cpt);
 }
 
+static void	ft_cpy(char *c, char s, unsigned long *i, unsigned long *j)
+{
+	*c = s;
+	*i = *i + 1;
+	*j = *j + 1;
+}
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char			*res;
@@ -61,6 +68,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (s1[0] == '\0')
 	{
 		res = malloc(1);
+		if (!res)
+			return (NULL);
 		res[0] = '\0';
 		return (res);
 	}
@@ -70,11 +79,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (is_in_str(set, s1[i]))
 		i++;
 	while (j < ft_strlen(s1) - count_chars(s1, set))
-	{
-		res[j] = s1[i];
-		j++;
-		i++;
-	}
+		ft_cpy(&res[j], s1[i], &i, &j);
 	res[j] = '\0';
 	return (res);
 }

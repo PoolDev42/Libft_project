@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 16:05:53 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/14 12:27:31 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/14 21:53:06 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,20 @@ static char	*ft_strdup_size(const char *s, unsigned int start, unsigned int end)
 	return (res);
 }
 
+void	ft_free(char **res, int size)
+{
+	int	i;
+
+	i = 0;
+	while (i < size)
+	{
+		if (res[i])
+			free(res[i]);
+		i++;
+	}
+	free(res);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**res;
@@ -79,6 +93,8 @@ char	**ft_split(char const *s, char c)
 		if (start != i)
 		{
 			res[k] = ft_strdup_size(s, start, i);
+			if (res[k] == NULL)
+				return (ft_free(res, k), NULL);
 			k++;
 		}
 	}

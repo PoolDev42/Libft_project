@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:41:57 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/14 15:19:25 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/14 20:50:21 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ static int	count_digits(int n)
 	cpt = 0;
 	num = (long) n;
 	if (num < 0)
+	{
+		cpt++;
 		num = -num;
+	}
 	while (num > 0)
 	{
 		cpt++;
@@ -32,14 +35,12 @@ static int	count_digits(int n)
 static void	init_variables(long *num, int *i, int n)
 {
 	*num = (long)n;
+	*i = count_digits(n);
 	if (n < 0)
 	{
-		*i = count_digits(n) + 1;
 		n = -n;
 		*num = *num * -1;
 	}
-	else
-		*i = count_digits(n);
 }
 
 static char	calculate_digit(long *num, int *i)
@@ -61,15 +62,14 @@ char	*ft_itoa(int n)
 	if (n == 0)
 	{
 		res = malloc(2);
+		if (!res)
+			return (NULL);
 		res[0] = 0 + '0';
 		res[1] = '\0';
 		return (res);
 	}
 	init_variables(&num, &i, n);
-	if (n < 0)
-		res = malloc(count_digits(n) + 2);
-	else
-		res = malloc(count_digits(n) + 1);
+	res = malloc(count_digits(n) + 1);
 	if (res == NULL)
 		return (NULL);
 	res[i] = '\0';

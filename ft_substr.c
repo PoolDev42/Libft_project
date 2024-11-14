@@ -6,11 +6,18 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 11:14:22 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/14 17:28:50 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/14 20:18:14 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static void	ft_cpy(char *c, char s, size_t *len, int *j)
+{
+	*c = s;
+	*len = *len - 1;
+	*j = *j + 1;
+}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -21,6 +28,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start >= ft_strlen(s) || len == 0)
 	{
 		res = malloc(1);
+		if (!res)
+			return (NULL);
 		res[0] = '\0';
 		return (res);
 	}
@@ -31,11 +40,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (res == NULL)
 		return (NULL);
 	while (s[start + j] && len > 0)
-	{
-		res[j] = s[start + j];
-		j++;
-		len--;
-	}
+		ft_cpy(&res[j], s[start + j], &len, &j);
 	res[j] = '\0';
 	return (res);
 }
@@ -43,7 +48,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 /*#include <stdio.h>
 int	main(void)
 {
-	char *str = ft_substr("hola", 4294967295, 0);
+	char *str = ft_substr("", 0, 0);
 	printf("%s", str);
 	free(str);
 	return (0);
