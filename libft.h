@@ -6,13 +6,15 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:37:37 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/14 15:57:02 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/14 17:17:39 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 #define LIBFT_H
+
 #include <stdlib.h>
+#include <unistd.h>
 
 int		ft_isalpha(int c);
 
@@ -75,5 +77,13 @@ char	*ft_itoa(int n);
 char	*ft_strmapi(char const *str, char (*f)(unsigned int, char));
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+void	ft_putendl_fd(char *s, int fd);
+
+void	ft_putstr_fd(char *s, int fd);
+
+void	ft_putnbr_fd(int n, int fd);
+
+void ft_putchar_fd(char c, int fd);
 
 #endif
