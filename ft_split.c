@@ -6,18 +6,11 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 16:05:53 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/14 21:53:06 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/15 13:41:01 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	is_sep(char a, char c)
-{
-	if (a == c)
-		return (1);
-	return (0);
-}
 
 static int	count_words(char const *s, char c)
 {
@@ -28,41 +21,57 @@ static int	count_words(char const *s, char c)
 	cpt = 0;
 	while (s[i])
 	{
-		while (is_sep(s[i], c) && s[i])
+		while (s[i] == c && s[i])
 			i++;
 		if (s[i] == '\0')
 			break ;
 		cpt++;
-		while (!is_sep(s[i], c) && s[i])
+		while (s[i] != c && s[i])
 			i++;
 	}
 	return (cpt);
 }
 
-static char	*ft_strdup_size(const char *s, unsigned int start, unsigned int end)
+static int	ft_len(char const *s, int i, char c)
+{
+	int	len;
+
+	len = 0;
+	while (s[i] && s[i] != c)
+	{
+		len++;
+		i++;
+	}
+	return (len);
+}
+
+static char	*ft_strdup_size(const char *s, unsigned int start, char c, int j)
 {
 	char	*res;
 	int		i;
+	int		len;
 
-	i = 0;
-	res = (char *)malloc((end - start + 1) * sizeof(char));
+	len = ft_len(s, j, c);
+	res = (char *)malloc((len + 1) * sizeof(char));
 	if (res == NULL)
 		return (NULL);
-	while (s[i] && start + i < end)
+	i = 0;
+	while (s[j] && s[j] != c && i < len)
 	{
 		res[i] = s[start + i];
 		i++;
+		j++;
 	}
 	res[i] = '\0';
 	return (res);
 }
 
-void	ft_free(char **res, int size)
+void	ft_free(char **res)
 {
 	int	i;
 
 	i = 0;
-	while (i < size)
+	while (res[i])
 	{
 		if (res[i])
 			free(res[i]);
@@ -83,20 +92,17 @@ char	**ft_split(char const *s, char c)
 	res = (char **)malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (res == NULL)
 		return (NULL);
-	while (s[i])
+	while (k < count_words(s, c))
 	{
-		while (is_sep(s[i], c) && s[i])
+		while (s[i] == c && s[i])
 			i++;
 		start = i;
-		while (!is_sep(s[i], c) && s[i])
+		res[k] = ft_strdup_size(s, start, c, i);
+		if (res[k] == NULL)
+			return (ft_free(res), NULL);
+		while (s[i] != c && s[i])
 			i++;
-		if (start != i)
-		{
-			res[k] = ft_strdup_size(s, start, i);
-			if (res[k] == NULL)
-				return (ft_free(res, k), NULL);
-			k++;
-		}
+		k++;
 	}
 	res[k] = NULL;
 	return (res);
