@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:37:37 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/14 17:26:04 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/17 22:35:54 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,7 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
 void	ft_putchar_fd(char c, int fd);
+
+t_list	*ft_lstnew(void *content);
 
 #endif
