@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 10:55:42 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/18 15:39:45 by lcalero          ###   ########.fr       */
+/*   Created: 2024/11/18 15:07:45 by lcalero           #+#    #+#             */
+/*   Updated: 2024/11/18 15:33:42 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list	*ptr;
+	t_list	*nxt;
 
-	ptr = malloc(sizeof(t_list));
-	if (!ptr)
-		return (NULL);
-	ptr->content = content;
-	ptr->next = NULL;
-	return (ptr);
+	if (lst == NULL || del == NULL)
+		return ;
+	while (*lst != NULL)
+	{
+		nxt = (*lst)->next;
+		del((*lst)->content);
+		free(*lst);
+		*lst = nxt;
+	}
+	free(*lst);
 }
-
-/*#include <stdio.h>
-int	main(void)
-{
-	int	a = 32;
-	t_list	*ptr = ft_lstnew(&a);
-	printf("%d", *(int*)ptr->content);
-	free(ptr);
-}*/

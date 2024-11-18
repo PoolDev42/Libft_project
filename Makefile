@@ -14,8 +14,9 @@ SRCS = ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
 	ft_isprint.c ft_strlcpy.c ft_substr.c ft_atoi.c ft_strnstr.c \
 	ft_strlcat.c
 
-BONUS_SRCS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c
-
+BONUS_SRCS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
+		ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c \
+		ft_lstiter_bonus.c ft_lstmap_bonus.c
 SRCS:= $(SRCS)
 
 OBJS = $(SRCS:.c=.o)
