@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:41:57 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/15 15:13:56 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/18 18:08:26 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,35 +22,16 @@ static int	count_digits(int n)
 	if (num < 0)
 	{
 		cpt++;
-		num = -num;
+		num *= -1;
 	}
 	while (num > 0)
 	{
-		cpt++;
 		num /= 10;
+		cpt++;
 	}
+	if (n == 0)
+		cpt = 1;
 	return (cpt);
-}
-
-static void	init_variables(long *num, int *i, int n)
-{
-	*num = (long)n;
-	*i = count_digits(n);
-	if (n < 0)
-	{
-		n = -n;
-		*num = *num * -1;
-	}
-}
-
-static char	calculate_digit(long *num, int *i)
-{
-	char	res;
-
-	res = *num % 10 + '0';
-	*num = *num / 10;
-	*i = *i - 1;
-	return (res);
 }
 
 char	*ft_itoa(int n)
@@ -59,25 +40,24 @@ char	*ft_itoa(int n)
 	int		i;
 	long	num;
 
-	if (n == 0)
-	{
-		res = malloc(2);
-		if (!res)
-			return (NULL);
-		res[0] = 0 + '0';
-		res[1] = '\0';
-		return (res);
-	}
-	init_variables(&num, &i, n);
-	res = malloc(count_digits(n) + 1);
+	res = malloc(sizeof(char) * count_digits(n) + 1);
 	if (res == NULL)
 		return (NULL);
-	res[i] = '\0';
-	i--;
+	i = count_digits(n);
+	num = (long) n;
+	if (n < 0)
+		num = -num;
+	res[i--] = '\0';
 	while (num > 0)
-		res[i] = calculate_digit(&num, &i);
+	{
+		res[i] = (num % 10) + '0';
+		num /= 10;
+		i--;
+	}
 	if (n < 0)
 		res[i] = '-';
+	if (n == 0)
+		res[i] = '0';
 	return (res);
 }
 
