@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:18:16 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/18 18:19:22 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/18 23:29:21 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,11 @@ static unsigned int	count_chars(const char *str, const char *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char			*res;
-	unsigned long	i;
-	unsigned long	j;
+	size_t			i;
+	size_t			j;
 
+	if (!s1 || !set)
+		return (NULL);
 	i = 0;
 	j = 0;
 	res = malloc(ft_strlen(s1) - count_chars(s1, set) * sizeof(char) + 1);

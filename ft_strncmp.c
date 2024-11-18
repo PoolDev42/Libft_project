@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:10:16 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/13 10:58:01 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/18 23:40:32 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned long	i;
-	unsigned long	cpt1;
-	unsigned long	cpt2;
+	size_t			i;
+	size_t			cpt1;
+	size_t			cpt2;
 
 	i = 0;
 	cpt1 = 0;

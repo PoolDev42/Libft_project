@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 14:31:36 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/15 14:06:58 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/18 23:31:47 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void			*res;
 	size_t			total_size;
 
-	total_size = nmemb * size;
-	if (nmemb > 0 && total_size > SIZE_MAX)
+	if (nmemb > 0 && size > SIZE_MAX / nmemb)
 		return (NULL);
+	total_size = nmemb * size;
 	res = malloc(total_size);
 	if (res == NULL)
 		return (NULL);

@@ -6,16 +6,18 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:37:23 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/13 12:02:51 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/18 23:49:07 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_atoi(const char *nptr)
 {
-	int	i;
-	int	res;
-	int	sign;
-	int	cpt;
+	size_t	i;
+	int		res;
+	int		sign;
+	int		cpt;
 
 	res = 0;
 	i = 0;

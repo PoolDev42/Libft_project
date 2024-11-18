@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 14:11:13 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/13 15:46:47 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/18 23:28:57 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strdup(const char *s)
 {
-	char	*res;
-	int		i;
+	char		*res;
+	size_t		i;
 
 	res = malloc(ft_strlen(s) + 1);
 	i = 0;
