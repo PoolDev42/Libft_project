@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 14:31:36 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/18 23:31:47 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:42 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	}
 	return (res);
 }
-
-/*#include <stdio.h>
-int	main(void)
-{
-	int	*res = ft_calloc(50, sizeof(int));
-	for (int i = 0; i < 50; i++)
-		printf("%d\n", res[i]);
-	free(res);
-}*/

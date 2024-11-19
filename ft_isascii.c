@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:43:41 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/18 23:50:13 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:40 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,3 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
-
-/*#include <stdio.h>
-int	main(void)
-{
-	printf("%d", ft_isascii('i'));
-	return (0);
-}*/

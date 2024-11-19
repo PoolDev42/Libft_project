@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:01:17 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/18 23:52:03 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:04 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,3 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
-
-/*#include <stdio.h>
-int	main(void)
-{
-	int a = ft_tolower('S');
-	printf("%c", a);
-}*/

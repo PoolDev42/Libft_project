@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:04:57 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/18 23:48:30 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:16 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	res[j] = '\0';
 	return (res);
 }
-
-/*#include <stdio.h>
-int	main(int ac, char **av)
-{
-	if (ac != 3)
-		return (1);
-	printf("%s", ft_strjoin(av[1], av[2]));
-	return (0);
-}*/

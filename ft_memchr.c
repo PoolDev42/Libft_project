@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 14:31:25 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/13 12:22:59 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:29 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-
-/*#include <string.h>
-#include <stdio.h>
-int	main(void)
-{
-
-	char arr[] = "";
-	char *res = (char *)ft_memchr(arr, '\0', 0);
-	printf("%s", res);
-	return (0);
-}*/

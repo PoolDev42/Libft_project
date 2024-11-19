@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 12:13:47 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/18 12:34:41 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:30 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
-
-/*#include <stdio.h>
-int	main(void)
-{
-	int	a = 32;
-	int	b = 42;
-	int	c = 52;
-	t_list	*ptr = ft_lstnew(&a);
-	ft_lstadd_front(&ptr, ft_lstnew(&b));
-	printf("%d", ft_lstsize(ptr));
-	free(ptr);
-}*/

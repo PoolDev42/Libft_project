@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:37:23 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/18 23:49:07 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:44 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (res * sign);
 }
-
-/*#include <stdio.h>
-#include <stdlib.h>
-int	main(int ac, char **av)
-{
-	if (ac != 2)
-		return (1);
-	int a = ft_atoi(av[1]);
-	int b = atoi(av[1]);
-	printf("ft function : %d\n", a);
-	printf("original function : %d\n", b);
-}*/

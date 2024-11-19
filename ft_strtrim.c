@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:18:16 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/18 23:29:21 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:08 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,14 +76,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	res[j] = '\0';
 	return (res);
 }
-
-/*#include <stdio.h>
-int	main(int ac, char **av)
-{
-	if (ac != 3)
-		return (1);
-	char *res = ft_strtrim(av[1], av[2]);
-	printf("%s", res);
-	free(res);
-	return (0);
-}*/

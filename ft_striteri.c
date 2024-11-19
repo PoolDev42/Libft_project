@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 15:56:38 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/18 23:51:18 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:17 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,21 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
-/*void	test(unsigned int i, char *c)
-{
-	if (*c >= 'a' && *c <= 'z')
-    {
-        *c -= 32;
-    }
-	i = 2;
-}
-
-#include <stdio.h>
-int	main(void)
-{
-	char *s1 = "salut les amis";
-	ft_striteri(s1, test);
-	printf("%s", s1);
-	return (0);
-}*/

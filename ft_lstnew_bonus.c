@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 10:55:42 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/18 15:39:45 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:30 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,3 @@ t_list	*ft_lstnew(void *content)
 	ptr->next = NULL;
 	return (ptr);
 }
-
-/*#include <stdio.h>
-int	main(void)
-{
-	int	a = 32;
-	t_list	*ptr = ft_lstnew(&a);
-	printf("%d", *(int*)ptr->content);
-	free(ptr);
-}*/

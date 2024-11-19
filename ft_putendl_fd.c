@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 16:44:11 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/14 16:50:08 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:23 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,3 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	write(fd, "\n", 1);
 }
-
-/*int	main(void)
-{
-	ft_putendl_fd("Salut les amis", 1);
-	return (0);
-}*/

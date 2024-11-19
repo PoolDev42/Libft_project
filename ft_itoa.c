@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:41:57 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/18 18:08:26 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:37 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,12 +60,3 @@ char	*ft_itoa(int n)
 		res[i] = '0';
 	return (res);
 }
-
-/*#include <stdio.h>
-int main(void)
-{
-	char *res = ft_itoa(6354763);
-	printf("%s\n", res);
-	free(res);
-	return (0);
-}*/

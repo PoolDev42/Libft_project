@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 16:59:17 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/14 17:17:01 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:22 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,3 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		ft_putchar_fd(num + '0', fd);
 }
-
-/*int	main(void)
-{
-	ft_putnbr_fd(-5, 2);
-	return (0);
-}*/

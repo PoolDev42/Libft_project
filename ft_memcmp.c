@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:45:18 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/08 12:05:41 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:27 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-/*#include <string.h>
-#include <stdio.h>
-int	main(void)
-{
-	char arr1[] = "ABCDEF";
-	char arr2[] = "ABCGFD";
-
-	printf("%d", ft_memcmp(arr1, arr2, 4));
-	return (0);
-}*/

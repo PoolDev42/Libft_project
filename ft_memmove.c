@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:56:54 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/13 11:49:11 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:25 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,27 +35,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/*#include <string.h>
-#include <stdio.h>
-int	main() 
-{
-
-	int dest[] = {12, 45, 67, 9};
-	int src[] = {1, 2, 9, 6, 9};
-	int length;
-	size_t size = sizeof(int) * 4;
-
-	for (length = 0; length < 4; length++) {
-		printf("%d ", dest[length]);
-	}
-	printf("\n");
-
-	ft_memmove(dest, src, size);
-
-	for (length = 0; length < 4; length++) {
-		printf("%d ", dest[length]);
-	}
-
-	return (0);
-}*/

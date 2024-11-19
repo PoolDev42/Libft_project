@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 11:14:22 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/18 23:25:38 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:06 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	res[j] = '\0';
 	return (res);
 }
-
-/*#include <stdio.h>
-int	main(void)
-{
-	char *str = ft_substr("", 0, 0);
-	printf("%s", str);
-	free(str);
-	return (0);
-}*/

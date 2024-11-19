@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 00:35:19 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/18 23:41:19 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:09 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-/*#include <stdio.h>
-#include <string.h>
-int	main(int ac, char **av)
-{
-	if (ac != 4)
-		return (1);
-	printf("%s", ft_strnstr((const char*)av[1], 
-	(const char*)av[2], atoi(av[3])));
-	return (0);
-}*/

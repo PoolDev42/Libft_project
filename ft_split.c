@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 16:05:53 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/15 13:41:01 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:19 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,20 +107,3 @@ char	**ft_split(char const *s, char c)
 	res[k] = NULL;
 	return (res);
 }
-
-/*int main(int ac, char **av)
-{
-	if (ac != 3)
-		return (1);
-	int	i = 0;
-	char **res = ft_split(av[1], av[2][0]);
-	while (res[i] != NULL)
-	{
-		printf("%s\n", res[i]);
-		free(res[i]);
-		i++;
-	}
-	printf("%s\n", res[i]);
-	free(res);
-	return (0);
-}*/

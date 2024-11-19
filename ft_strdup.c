@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 14:11:13 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/18 23:28:57 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:18 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,3 @@ char	*ft_strdup(const char *s)
 	res[i] = '\0';
 	return (res);
 }
-
-/*#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	char *s = ft_strdup("sadfvbf");
-	printf("%s", s);
-	free(s);
-	return (0);
-}*/

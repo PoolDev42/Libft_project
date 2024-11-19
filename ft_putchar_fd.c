@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 17:16:33 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/14 17:19:46 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:24 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,3 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-
-/*int	main(void)
-{
-	ft_putchar_fd('a', 2);
-}*/

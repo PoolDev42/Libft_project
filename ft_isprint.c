@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:49:47 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/18 23:50:28 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:38 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,3 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
-
-/*#include <stdio.h>
-int	main(void)
-{
-	printf("%d", ft_isprint('i'));
-	return (0);
-}*/

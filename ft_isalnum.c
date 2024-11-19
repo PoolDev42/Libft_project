@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:37:32 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/18 23:50:02 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:41 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,3 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-
-/*#include <stdio.h>
-int	main(void)
-{
-	printf("%d", ft_isalnum('-'));
-	return (0);
-}*/

@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:10:16 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/18 23:40:32 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:12 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (cpt1 - cpt2);
 }
-
-/*#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	printf("ft function : %d\n", ft_strncmp("salut", "sa", 3));
-	printf("original function : %d\n", strncmp("salut", "sa", 3));
-}*/

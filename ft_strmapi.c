@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 15:25:00 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/14 15:55:22 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/19 10:23:13 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,23 +31,3 @@ char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 	res[i] = '\0';
 	return (res);
 }
-
-/*char f(unsigned int i, char c)
-{
-	i = 2;
-	char res;
-	if (c >= 'a' && c <= 'z')
-		res = c - 32;
-	else
-		res = c;
-	return (res);
-}
-
-#include <stdio.h>
-int	main(void)
-{
-	char *s1 = "salut les amis";
-	char *res = ft_strmapi(s1, *f);
-	printf("%s", res);
-	free(res);
-}*/
