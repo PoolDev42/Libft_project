@@ -3,6 +3,8 @@ NAME = libft.a
 
 CC = cc
 
+HEADER = libft.h
+
 CFLAGS = -Wall -Wextra -Werror
 
 SRCS = ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
@@ -28,7 +30,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-%.o: %.c
+%.o: %.c ${HEADER}
 	$(CC) $(CFLAGS) -c $< -o $@
 
 bonus: $(NAME) $(BONUS_OBJ)
