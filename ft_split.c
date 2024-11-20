@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 16:05:53 by lcalero           #+#    #+#             */
-/*   Updated: 2024/11/19 10:23:19 by lcalero          ###   ########.fr       */
+/*   Updated: 2024/11/20 10:19:05 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ static char	*ft_strdup_size(const char *s, unsigned int start, char c, int j)
 	return (res);
 }
 
-void	ft_free(char **res)
+static void	ft_free(char **res)
 {
 	int	i;
 
